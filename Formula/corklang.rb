@@ -13,6 +13,7 @@ class Corklang < Formula
            "-o", buildpath/"out",
            "/p:Version=#{version}"
     bin.install buildpath/"out/Cork.Compiler" => "cork"
+    (share/"corklang/stdlib").install Dir["stdlib/*.cork"]
   end
 
   test do
