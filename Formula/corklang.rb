@@ -1,8 +1,8 @@
 class Corklang < Formula
   desc "Programming language that compiles to Commodore 64 machine code"
   homepage "https://github.com/corklang/cork"
-  url "https://github.com/corklang/cork/archive/refs/tags/0.3.0.tar.gz"
-  sha256 "78bbcf43e9211558d5f0abf68918db96a2bebf6f766cd04d8bcb793e83500c2d"
+  url "https://github.com/corklang/cork/archive/refs/tags/0.3.1.tar.gz"
+  sha256 "2d002b630ed3839d7d67016a74ac1a02b36fd2f795c31c90a8ad97b92c58a31e"
   license "MIT"
 
   depends_on "dotnet"
