@@ -1,3 +1,16 @@
+class DotnetRequirement < Requirement
+  fatal true
+  download "https://dotnet.microsoft.com/download"
+
+  satisfy(build_env: false) { which("dotnet") }
+
+  def message
+    "corklang requires the .NET SDK to build.\n" \
+      "Install with: brew install dotnet\n" \
+      "Or download from: https://dotnet.microsoft.com/download"
+  end
+end
+
 class Corklang < Formula
   desc "Programming language that compiles to Commodore 64 machine code"
   homepage "https://github.com/corklang/cork"
@@ -5,7 +18,7 @@ class Corklang < Formula
   sha256 "2d002b630ed3839d7d67016a74ac1a02b36fd2f795c31c90a8ad97b92c58a31e"
   license "MIT"
 
-  depends_on "dotnet"
+  depends_on DotnetRequirement
 
   def install
     system "dotnet", "publish", "src/Cork.Compiler",
